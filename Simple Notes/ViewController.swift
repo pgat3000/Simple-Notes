@@ -8,22 +8,26 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-   
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
     
     @IBOutlet var table: UITableView!
     @IBOutlet var label: UILabel!
     
-    var models: [(title: String , note: String)] = []
-                  
+    //var models: [(title: String , note: String)] = []
+      private var models = [NoteListItem]()
     
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        getAllitems()
         title = "Simple Notes"
+        
         table.delegate = self
         table.dataSource = self
+        table.reloadData()
         
     }
     @IBAction func didTapNewNote() {
@@ -36,7 +40,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         vc.completion = {
             noteTitle, note in
             self.navigationController?.popToRootViewController(animated: true)
-            self.models.append((title: noteTitle, note: note))
+           // self.models.append((title: noteTitle, note: note))
+            self.createItem(title: noteTitle, note: note)
             self.label.isHidden = true
             self.table.isHidden = false
             self.table.reloadData()
@@ -70,5 +75,49 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         vc.noteTitle = model.title
         navigationController?.pushViewController(vc,animated: true)
     }
+//coreData
+    func getAllitems(){
+        do{
+            models = try context.fetch(NoteListItem.fetchRequest())
+            DispatchQueue.main.async {
+                self.table.reloadData()
+                self.table.isHidden = false
+            }
+        }catch{
+            //onError
+        }
+    }
+    
+    func createItem(title: String,note: String){
+        let newItem = NoteListItem(context: context)
+        newItem.note = note
+        newItem.title = title
+        do{
+            try context.save()
+            getAllitems()
+        }catch{
+            //OnError
+        }
+    }
+    func deleteItem(item : NoteListItem){
+        context.delete(item)
+        do{
+            try context.save()
+            getAllitems()
+        }catch{
+            //OnError
+        }
+    }
+        
+    func updateItem(item: NoteListItem,newTitle : String , newNote : String){
+        item.note = newNote
+        item.title = newTitle
+        do{
+            try context.save()
+            getAllitems()
+        }catch{
+            //OnError
+        }
+        }
 }
 

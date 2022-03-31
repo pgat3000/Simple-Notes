@@ -27,21 +27,21 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="5v8-Ml-xdF" detailTextLabel="oEE-dR-fWh" style="IBUITableViewCellStyleSubtitle" id="lbA-xP-CFD">
-                                        <rect key="frame" x="0.0" y="44.5" width="374" height="66.5"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="374" height="80.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lbA-xP-CFD" id="GGw-IZ-AOf">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="66.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="80.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5v8-Ml-xdF">
-                                                    <rect key="frame" x="20" y="8" width="49.5" height="30"/>
+                                                    <rect key="frame" x="20" y="14.5" width="49.5" height="30"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oEE-dR-fWh">
-                                                    <rect key="frame" x="20" y="38" width="58.5" height="20.5"/>
+                                                    <rect key="frame" x="20" y="45" width="58.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>

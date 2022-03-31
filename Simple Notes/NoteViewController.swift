@@ -11,14 +11,18 @@ class NoteViewController: UIViewController {
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var noteLabel: UITextView!
     
-    public var noteTitle: String = ""
-    public var note: String = "" 
+    public var noteTitle: String? = ""
+    public var note: String? = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         titleLabel.text = noteTitle
         noteLabel.text = note
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Edit", style: .done, target: self, action: #selector(didtapEdit))
+    }
+    @objc func didtapEdit(){
+        
     }
     
 
