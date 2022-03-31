@@ -14,6 +14,8 @@
 		41CCE68027EFBE4500FEF163 /* Simple_Notes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 41CCE67E27EFBE4500FEF163 /* Simple_Notes.xcdatamodeld */; };
 		41CCE68227EFBE4600FEF163 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41CCE68127EFBE4600FEF163 /* Assets.xcassets */; };
 		41CCE68527EFBE4600FEF163 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41CCE68327EFBE4600FEF163 /* LaunchScreen.storyboard */; };
+		41CCE68D27EFBF2700FEF163 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CCE68C27EFBF2700FEF163 /* NoteViewController.swift */; };
+		41CCE68F27EFBF5900FEF163 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CCE68E27EFBF5900FEF163 /* EntryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		41CCE68127EFBE4600FEF163 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		41CCE68427EFBE4600FEF163 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		41CCE68627EFBE4600FEF163 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41CCE68C27EFBF2700FEF163 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
+		41CCE68E27EFBF5900FEF163 /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				41CCE68327EFBE4600FEF163 /* LaunchScreen.storyboard */,
 				41CCE68627EFBE4600FEF163 /* Info.plist */,
 				41CCE67E27EFBE4500FEF163 /* Simple_Notes.xcdatamodeld */,
+				41CCE68C27EFBF2700FEF163 /* NoteViewController.swift */,
+				41CCE68E27EFBF5900FEF163 /* EntryViewController.swift */,
 			);
 			path = "Simple Notes";
 			sourceTree = "<group>";
@@ -144,7 +150,9 @@
 				41CCE67A27EFBE4500FEF163 /* ViewController.swift in Sources */,
 				41CCE67627EFBE4500FEF163 /* AppDelegate.swift in Sources */,
 				41CCE67827EFBE4500FEF163 /* SceneDelegate.swift in Sources */,
+				41CCE68D27EFBF2700FEF163 /* NoteViewController.swift in Sources */,
 				41CCE68027EFBE4500FEF163 /* Simple_Notes.xcdatamodeld in Sources */,
+				41CCE68F27EFBF5900FEF163 /* EntryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
