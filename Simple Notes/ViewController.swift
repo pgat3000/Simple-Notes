@@ -74,6 +74,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         vc.noteTitle = model.title
         navigationController?.pushViewController(vc,animated: true)
+        
     }
 //coreData
     func getAllitems(){
@@ -109,7 +110,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
         
-    func updateItem(item: NoteListItem,newTitle : String , newNote : String){
+    func updateItem(item: NoteListItem,newTitle : String? , newNote : String?){
         item.note = newNote
         item.title = newTitle
         do{
