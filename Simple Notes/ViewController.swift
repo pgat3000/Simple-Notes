@@ -76,6 +76,27 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         navigationController?.pushViewController(vc,animated: true)
         
     }
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+            return UISwipeActionsConfiguration(actions: [
+                RowActions(forRowAt: indexPath)
+            ])
+        }
+    func RowActions(forRowAt indexPath: IndexPath) -> UIContextualAction {
+
+        //let btnEdit = UIContextualAction(style: .normal, title: "Edit") { (action, indexPath, completion) in
+          //  print("DELETE HERE")
+
+            //completion(true)
+        //}
+        let btnDelete = UIContextualAction(style: .destructive, title: "Delete"){ (action, indexPath, completion) in
+            print("DELETE HERE")
+
+            completion(true)
+        }
+               
+           
+           return btnDelete
+    }
 //coreData
     func getAllitems(){
         do{
