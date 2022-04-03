@@ -10,7 +10,7 @@ import UIKit
 class NoteViewController: UIViewController {
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var noteLabel: UITextView!
-    
+    public var completion: ((String?,String?)->Void)?
     public var noteTitle: String? = ""
     public var note: String? = ""
     
@@ -19,9 +19,10 @@ class NoteViewController: UIViewController {
 
         titleLabel.text = noteTitle
         noteLabel.text = note
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Edit", style: .done, target: self, action: #selector(didtapEdit))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Update", style: .done, target: self, action: #selector(didtapUpdate))
     }
-    @objc func didtapEdit(){
+    @objc func didtapUpdate(){
+        completion?(titleLabel.text,noteLabel.text)
         
     }
     

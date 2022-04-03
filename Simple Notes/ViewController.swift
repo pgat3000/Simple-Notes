@@ -73,6 +73,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         vc.note = model.note
         
         vc.noteTitle = model.title
+        vc.completion = {
+            noteTitle, note in
+            self.navigationController?.popToRootViewController(animated: true)
+           // self.models.append((title: noteTitle, note: note))
+            self.updateItem(item: model, newTitle: noteTitle, newNote: note)
+            self.label.isHidden = true
+            self.table.isHidden = false
+            self.table.reloadData()
+        }
         navigationController?.pushViewController(vc,animated: true)
         
     }
@@ -83,13 +92,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     func RowActions(forRowAt indexPath: IndexPath) -> UIContextualAction {
 
+        //adding more options, requires configuration function
         //let btnEdit = UIContextualAction(style: .normal, title: "Edit") { (action, indexPath, completion) in
           //  print("DELETE HERE")
 
             //completion(true)
         //}
+        let model = models[indexPath.row]
         let btnDelete = UIContextualAction(style: .destructive, title: "Delete"){ (action, indexPath, completion) in
             print("DELETE HERE")
+            
+            self.deleteItem(item: model)
 
             completion(true)
         }
