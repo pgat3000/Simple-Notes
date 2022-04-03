@@ -19,10 +19,12 @@ class NoteViewController: UIViewController {
 
         titleLabel.text = noteTitle
         noteLabel.text = note
+        
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Update", style: .done, target: self, action: #selector(didtapUpdate))
     }
     @objc func didtapUpdate(){
         completion?(titleLabel.text,noteLabel.text)
+        //when the view closes, completion is triggered
         
     }
     
